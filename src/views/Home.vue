@@ -36,4 +36,19 @@ export default {
   text-align: left;
   padding: 20px;
 }
+
+@media screen and (max-width: 600px) {
+    .container{
+        display: block;
+        max-width: 400px;
+    }
+
+    .col{
+        text-align: left;
+    }
+
+    .button{
+        display: none;
+    }
+}
 </style>
