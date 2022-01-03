@@ -7,6 +7,8 @@
 <script>
 import Artwork from './Artwork.vue'
 
+import Image from "../assets/image1.jpg"
+
 export default {
   name: 'Col2',
   components: {
@@ -15,27 +17,9 @@ export default {
   data(){
       return {
           art: [
-              {title: 'The Blue Atom', src: '', searchEngineTitle: '', summary: 'A one of a kind artwork produced by myself which showcases the way in which atoms in the universe coincide with waves in the ocean.'}
+              {title: 'The Blue Atom', cleanUrl: 'the-blue-atom', src: Image, summary: 'A one of a kind artwork produced by myself which showcases the way in which atoms in the universe coincide with waves in the ocean.'},
           ]
       }
   }
 }
 </script>
-
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-h3 {
-  margin: 40px 0 0;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
-}
-</style>

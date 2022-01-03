@@ -1,46 +1,58 @@
 <template>
   <div id="app">
     <nav>
-      <a href="/">Home</a>
-      <a href="/about-me">About Me</a>
-      <a href="/my-work">My Work</a>
-      <a href="/contact">Contact</a>
+      <router-link to="/">Home</router-link>
+      <router-link to="/about-me">About Me</router-link>
+      <router-link to="/contact">Contact</router-link>
     </nav>
-    <main>
-      <h1>My Work</h1>
-      <section class="container">
-        <Col1></Col1>
-        <Col2></Col2>
-        <Col3></Col3>
-      </section>
-    </main>
+    <router-view></router-view>
     
   </div>
 </template>
 
 <script>
-import Col1 from './components/Col1.vue'
-import Col2 from './components/Col2.vue'
-import Col3 from './components/Col3.vue'
 
 export default {
   name: 'App',
-  components: {
-    Col1,
-    Col2,
-    Col3
-  }
 }
 </script>
 
 <style>
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400&display=swap');
+
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Lato', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  margin-top: 30px;
+}
+
+h1, h2, h3 {
+  font-family: 'EB Garamond', serif;
+}
+
+nav{
+  max-width: 400px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
+nav a{
+  text-decoration: none;
+  color: black;
+  padding-bottom: 5px;
+}
+
+.router-link-exact-active{
+  border-bottom: 1px solid black;
+}
+
+h1{
+  padding: 60px 0;
 }
 
 .container{

@@ -1,9 +1,9 @@
 <template>
   <div class="artwork">
-    <img :src="art.src" :alt="art.alt">
+    <img :src="art.src" :alt="art.title">
     <h2>{{ art.title }}</h2>
     <p>{{ art.summary}}</p>
-    <button>Read More</button>
+    <router-link :to="'/work/' + art.cleanUrl" class="button">Read More</router-link>
   </div>
 </template>
 
@@ -16,20 +16,24 @@ export default {
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-h3 {
-  margin: 40px 0 0;
+<style>
+.artwork img{
+  max-width:100%;
 }
-ul {
-  list-style-type: none;
-  padding: 0;
+
+.artwork .button{
+  border: none;
+  background: white;
+  font-size: 16px;
+  box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.13);
+  padding: 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.1s;
 }
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
+
+.artwork .button:hover{
+  box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.23);
+  margin-top: -2px;
 }
 </style>
