@@ -6,9 +6,7 @@
 
 <script>
 import Artwork from './Artwork.vue'
-import Data from '../data/data.json'
-
-// import Image from "../assets/image1.jpg"
+import Image from "../assets/image1.jpg"
 
 export default {
   name: 'Col1',
@@ -17,7 +15,9 @@ export default {
   },
   data(){
       return {
-          art: Data
+          art: [
+              {title: 'The Blue Atom', cleanUrl: 'the-blue-atom', src: Image, summary: 'A one of a kind artwork produced by myself which showcases the way in which atoms in the universe coincide with waves in the ocean.'},
+          ]
       }
   }
 }
