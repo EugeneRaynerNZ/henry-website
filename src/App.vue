@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" :class="{modalActive: this.$modalOverflowTrigger}">
     <nav>
       <router-link to="/">Home</router-link>
       <router-link to="/about-me">About Me</router-link>
@@ -12,9 +12,10 @@
 
 <script>
 
-export default {
+import Vue from 'vue'
+export default Vue.extend({
   name: 'App',
-}
+})
 </script>
 
 <style>
@@ -49,6 +50,7 @@ nav a{
 
 .router-link-exact-active{
   border-bottom: 1px solid black;
+  font-weight: bold;
 }
 
 h1{
@@ -65,5 +67,14 @@ h1{
   display: flex;
   text-align: left;
   padding: 20px;
+  flex-direction: column;
+}
+
+.col .artwork{
+  margin-top: 50px;
+}
+
+.col .artwork:first-child{
+  margin-top: 0px;
 }
 </style>

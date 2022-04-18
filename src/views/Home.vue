@@ -14,14 +14,15 @@ import Col1 from '../components/Col1.vue'
 import Col2 from '../components/Col2.vue'
 import Col3 from '../components/Col3.vue'
 
-export default {
+import Vue from 'vue'
+export default Vue.extend({
   name: 'Home',
   components: {
     Col1,
     Col2,
     Col3
   }
-}
+})
 </script>
 
 <style>

@@ -9,6 +9,8 @@ import Contact from './views/Contact.vue'
 
 Vue.config.productionTip = false
 
+Vue.prototype.$modalOverflowTrigger = false
+
 const routes = [
   {
     path: '/',

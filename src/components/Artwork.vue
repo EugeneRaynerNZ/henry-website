@@ -4,39 +4,47 @@
     <h2>{{ art.title }}</h2>
     <p>{{ art.summary}}</p>
     <button @click="openModal" class="button">Read More</button>
-    <div v-if="activeModal" class="modal">
+    <div v-if="modalIsOpen" class="modal">
       <div class="modal--container">
         <div class="modal--container-header">
           <h2>{{ art.title }}</h2>
           <p @click="closeModal" class="x-button">x</p>
         </div>
-        <img :src="art.src" :alt="art.title">
-        
+        <div class="modal--container-body">
+          <img :src="art.src" :alt="art.title">
+          <div class="description">
+            <p v-for="(description, index) in art.fullDescription" :key="index">{{description}}</p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-export default {
+import Vue from 'vue'
+export default Vue.extend({
   name: 'Artwork',
   props: {
     art: Object
   },
   data(){
     return {
-      activeModal: false,
+      modalIsOpen: false,
     }
   },
   methods: {
     openModal(){
-      this.activeModal = true
+      this.modalIsOpen = true
+      this.$modalOverflowTrigger = true
+      
     },
     closeModal(){
-      this.activeModal = false
+      this.modalIsOpen = false
+      this.$modalOverflowTrigger = false
     }
-  }
-}
+  },
+})
 </script>
 
 <style>
@@ -46,17 +54,18 @@ export default {
   position: absolute;
   top: 0;
   left: 0;
-  min-height: 100vh;
+  height: 100vh;
   width: 100%;
-  overflow-y: scroll;
+  overflow: hidden;
 }
 
 .modal--container{
-  max-width: 900px;
+  max-width: 700px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: 100vh;
 }
 
 .modal--container-header{
@@ -66,13 +75,30 @@ export default {
   padding: 40px 0;
 }
 
+.modal--container-body{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.modal--container-body .description{
+  padding: 20px;
+  background: white;
+  margin-left: 20px;
+  width: 100%;
+}
+
+.modal--container-body .description p{
+  margin-top: 0;
+}
+
 .x-button{
   font-size: 20px;
   cursor: pointer;
 }
 
 .modal--container img{
-  height: 80%;
+  /* height: 80%; */
   width: 400px;
 }
 
