@@ -3,21 +3,22 @@
     <img :src="art.src" :alt="art.title">
     <h2>{{ art.title }}</h2>
     <p>{{ art.summary}}</p>
-    <button @click="openModal" class="button">Read More</button>
-    <div v-if="modalIsOpen" class="modal">
-      <div class="modal--container">
+    <button @click="show" class="button">Read More</button>
+    <modal name="my-first-modal">
+        <div class="modal--container">
         <div class="modal--container-header">
           <h2>{{ art.title }}</h2>
-          <p @click="closeModal" class="x-button">x</p>
+          <p @click="hide" class="x-button">x</p>
         </div>
         <div class="modal--container-body">
           <img :src="art.src" :alt="art.title">
           <div class="description">
-            <p v-for="(description, index) in art.fullDescription" :key="index">{{description}}</p>
+            <div v-for="(description, index) in art.fullDescription" :key="index"><p v-if="description">{{description}}</p></div>
+            <button class="button" @click="goToContactForm">Enquire Now</button>
           </div>
         </div>
       </div>
-    </div>
+    </modal>
   </div>
 </template>
 
@@ -34,16 +35,21 @@ export default Vue.extend({
     }
   },
   methods: {
-    openModal(){
-      this.modalIsOpen = true
-      this.$modalOverflowTrigger = true
-      
+        show () {
+            this.$modal.show('my-first-modal');
+        },
+        hide () {
+            this.$modal.hide('my-first-modal');
+        },
+        goToContactForm(){
+          this.$root.enquire = this.art.id
+          this.$router.push({ name: 'Contact' })
+        }
     },
-    closeModal(){
-      this.modalIsOpen = false
-      this.$modalOverflowTrigger = false
+
+    mounted(){
+      console.log(this.art)
     }
-  },
 })
 </script>
 
@@ -106,7 +112,7 @@ export default Vue.extend({
   max-width:100%;
 }
 
-.artwork .button{
+.button{
   border: none;
   background: white;
   font-size: 16px;
@@ -117,7 +123,7 @@ export default Vue.extend({
   transition: all 0.1s;
 }
 
-.artwork .button:hover{
+.button:hover{
   box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.23);
   margin-top: -2px;
 }

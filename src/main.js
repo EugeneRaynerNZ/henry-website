@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router';
+import VModal from 'vue-js-modal'
     
 Vue.use(VueRouter);
 import App from './App.vue'
@@ -8,8 +9,7 @@ import About from './views/About.vue'
 import Contact from './views/Contact.vue'
 
 Vue.config.productionTip = false
-
-Vue.prototype.$modalOverflowTrigger = false
+Vue.use(VModal)
 
 const routes = [
   {

@@ -1,43 +1,18 @@
 <template>
     <main>
         <h1>Contact</h1>
-        <form
-            name="ask-question"
-            method="post"
-            data-netlify="true"
-            data-netlify-honeypot="bot-field"
-            >
-            <input type="hidden" name="form-name" value="ask-question" />
-            <label v-for="(panelist, index) in panelists" :key="index">
-            <input
-                type="radio"
-                name="panelist"
-                :value="panelist"
-                @input="ev => updatePanelist"
-                :checked="panelist === currentPanelist"
-            />
-            <span>{{ panelist }}</span>
-            </label>
-            ...
-            <button>Submit</button>
-        </form>
+        <p>Please enter your contact information below and<br />I will get back to you as soon as possible!</p>
+        <ContactForm />
     </main>
 </template>
 
 <script>
+import ContactForm from '../components/ContactForm.vue'
 export default {
   name: 'Contact',
-   methods: {
-    updatePanelist (ev) {
-      this.currentPanelist = ev.target.value
-    }
+  components: {
+    ContactForm
   },
-  data () {
-    return {
-      panelists: ['Evan You', 'Chris Fritz'],
-      currentPanelist: 'Evan You'
-    }
-  }
 }
 </script>
 

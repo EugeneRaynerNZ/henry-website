@@ -7,7 +7,10 @@
 <script>
 import Vue from 'vue'
 import Artwork from './Artwork.vue'
-import Image from "../assets/image1.jpg"
+import AbstractCloningVector from "../assets/image1.jpg"
+// import Image2 from "../assets/2.jpg"
+// import Image3 from "../assets/3.jpg"
+// import Image4 from "../assets/4.jpg"
 
 export default Vue.extend({
   name: 'Col1',
@@ -17,8 +20,34 @@ export default Vue.extend({
   data(){
       return {
           art: [
-              {title: 'The Blue Atom', cleanUrl: 'the-blue-atom', src: Image, summary: 'A one of a kind artwork produced by myself which showcases the way in which atoms in the universe coincide with waves in the ocean.', fullDescription: ['paragraph 1', 'paragraph 2', 'paragraph 3']},
-              {title: 'The Blue Atom2', cleanUrl: 'the-blue-atom', src: Image, summary: 'A one of a kind artwork produced by myself which showcases the way in which atoms in the universe coincide with waves in the ocean.', fullDescription: ['paragraph 1', 'paragraph 2', 'paragraph 3']},
+              {
+                id: 'abstract-cloning-vector', 
+                title: 'Abstract Cloning Vector',
+                src: AbstractCloningVector,
+                summary: 'Acrylic on canvas, 2021',
+                fullDescription: ['paragraph 1', 'paragraph 2', 'paragraph 3']
+              },
+              {
+                id: 'the-blue-atom-2', 
+                title: 'The Blue Atom 2',
+                src: Image,
+                summary: 'A one of a kind artwork produced by myself which showcases the way in which atoms in the universe coincide with waves in the ocean.',
+                fullDescription: ['paragraph 1', 'paragraph 2', 'paragraph 3']
+              },
+              {
+                id: 'the-blue-atom-2', 
+                title: 'The Blue Atom 2',
+                src: Image,
+                summary: 'A one of a kind artwork produced by myself which showcases the way in which atoms in the universe coincide with waves in the ocean.',
+                fullDescription: ['paragraph 1', 'paragraph 2', 'paragraph 3']
+              },
+              {
+                id: 'the-blue-atom-2', 
+                title: 'The Blue Atom 2',
+                src: Image,
+                summary: 'A one of a kind artwork produced by myself which showcases the way in which atoms in the universe coincide with waves in the ocean.',
+                fullDescription: ['paragraph 1', 'paragraph 2', 'paragraph 3']
+              },
           ]
       }
   }

@@ -1,5 +1,5 @@
 <template>
-  <div id="app" :class="{modalActive: this.$modalOverflowTrigger}">
+  <div id="app" :class="{modalActive: $root.modalOverflowTrigger}">
     <nav>
       <router-link to="/">Home</router-link>
       <router-link to="/about-me">About Me</router-link>
@@ -29,6 +29,17 @@ export default Vue.extend({
   text-align: center;
   color: #2c3e50;
   margin-top: 30px;
+}
+
+.vm--modal{
+  width: auto !important;
+  height: auto !important;
+  top: 0 !important;
+  left: 0 !important;
+}
+
+.modalActive{
+  overflow: hidden;
 }
 
 h1, h2, h3 {
