@@ -8,7 +8,7 @@
 import Vue from 'vue'
 import Artwork from './Artwork.vue'
 import AbstractCloningVector from "../assets/image1.jpg"
-import ColourBlind from "../assets/colourblind.jpg"
+import ColourBlind from "../assets/colour-blind.jpg"
 // import Image2 from "../assets/2.jpg"
 // import Image3 from "../assets/3.jpg"
 // import Image4 from "../assets/4.jpg"
