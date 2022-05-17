@@ -36,6 +36,7 @@ export default Vue.extend({
   display: flex;
   text-align: left;
   padding: 20px;
+  flex: 0 0 33%;
 }
 
 @media screen and (max-width: 600px) {
