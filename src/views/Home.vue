@@ -1,6 +1,6 @@
 <template>
     <main>
-      <h1>My Work</h1>
+      <h1>My Art</h1>
       <section class="container">
         <Col1></Col1>
         <Col2></Col2>
@@ -28,7 +28,7 @@ export default Vue.extend({
 <style>
 .container{
   display: flex;
-  max-width: 900px;
+  max-width: 1100px;
   margin: 0 auto;
 }
 

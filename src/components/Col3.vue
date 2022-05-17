@@ -7,7 +7,8 @@
 <script>
 import Artwork from './Artwork.vue'
 
-import Image from "../assets/image1.jpg"
+import Tooth from "../assets/tooth.jpg"
+import Longform4 from "../assets/longform4.jpg"
 
 export default {
   name: 'Col3',
@@ -18,10 +19,17 @@ export default {
       return {
           art: [
               {
-                id: 'the-blue-atom', 
-                title: 'The Blue Atom',
-                src: Image,
-                summary: 'A one of a kind artwork produced by myself which showcases the way in which atoms in the universe coincide with waves in the ocean.',
+                id: 'Tooth', 
+                title: 'Abstract Tooth',
+                src: Tooth,
+                summary: '2021, acrylic on canvas, 70 x 50cm',
+                fullDescription: ['paragraph 1', 'paragraph 2', 'paragraph 3']
+              },
+              {
+                id: 'Longform4', 
+                title: 'Longform Abstract #4',
+                src: Longform4,
+                summary: '2020, acrylic on canvas, 80 x 40cm',
                 fullDescription: ['paragraph 1', 'paragraph 2', 'paragraph 3']
               },
           ]

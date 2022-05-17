@@ -7,8 +7,8 @@
 <script>
 import Artwork from './Artwork.vue'
 
-import Image from "../assets/image1.jpg"
-import Image2 from "../assets/2.jpg"
+import Ice from "../assets/ice.jpg"
+import Sunset from "../assets/hillscape.jpg"
 
 export default {
   name: 'Col2',
@@ -19,17 +19,17 @@ export default {
       return {
           art: [
               {
-                id: 'the-blue-atom', 
-                title: 'The Blue Atom',
-                src: Image,
-                summary: 'A one of a kind artwork produced by myself which showcases the way in which atoms in the universe coincide with waves in the ocean.',
-                fullDescription: ['paragraph 1', 'paragraph 2', 'paragraph 3']
+                id: 'ice', 
+                title: 'Cold Colour',
+                src: Ice,
+                summary: '2020, acrylic on canvas, 70 x 50cm',
+                fullDescription: ['test', 'test 2', 'test 3']
               },
               {
-                id: 'the-blue-atom', 
-                title: 'The Blue Atom 3',
-                src: Image2,
-                summary: 'A one of a kind artwork produced by myself which showcases the way in which atoms in the universe coincide with waves in the ocean.',
+                id: 'hillscape', 
+                title: 'Abstract Beachscape #2',
+                src: Sunset,
+                summary: '2021, acrylic on canvas, 70 x 50cm',
                 fullDescription: ['paragraph 1', 'paragraph 2', 'paragraph 3']
               },
           ]

@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import Henry from '../assets/2.jpg'
+import Henry from '../assets/artist.jpg'
 export default {
   name: 'About',
   data(){
