@@ -4,7 +4,7 @@
     <h2>{{ art.title }}</h2>
     <p>{{ art.summary}}</p>
     <button @click="show" class="button">Read More</button>
-    <modal name="my-first-modal">
+    <modal :name="art.id">
         <div class="modal--container">
         <div class="modal--container-header">
           <h2>{{ art.title }}</h2>
@@ -36,10 +36,10 @@ export default Vue.extend({
   },
   methods: {
         show () {
-            this.$modal.show('my-first-modal');
+            this.$modal.show(this.art.id);
         },
         hide () {
-            this.$modal.hide('my-first-modal');
+            this.$modal.hide(this.art.id);
         },
         goToContactForm(){
           this.$root.enquire = this.art.id
