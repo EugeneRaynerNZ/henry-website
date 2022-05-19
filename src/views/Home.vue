@@ -26,31 +26,18 @@ export default Vue.extend({
 </script>
 
 <style>
-.container{
-  display: flex;
-  max-width: 1100px;
-  margin: 0 auto;
-}
-
 .col{
   display: flex;
   text-align: left;
-  padding: 20px;
-  flex: 0 0 33%;
+  flex-direction: column;
 }
 
-@media screen and (max-width: 600px) {
-    .container{
-        display: block;
-        max-width: 400px;
-    }
+.col .artwork{
+  margin-top: 50px;
+  padding: 20px;
+}
 
-    .col{
-        text-align: left;
-    }
-
-    .button{
-        display: none;
-    }
+.col .artwork:first-child{
+  margin-top: 0px;
 }
 </style>

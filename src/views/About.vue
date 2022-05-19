@@ -31,4 +31,12 @@ export default {
     max-width: 100%;
     margin-bottom: 20px;
 }
+
+@media screen and (max-width: 600px) {
+    .about--summary{
+        display: block;
+        max-width: 400px;
+        padding: 0 20px;
+    }
+}
 </style>

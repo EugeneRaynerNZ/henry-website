@@ -35,20 +35,6 @@ export default Vue.extend({
                 summary: 'Acrylic on canvas, 2020, 40 x 40cm',
                 fullDescription: ['paragraph 1', 'paragraph 2', 'paragraph 3']
               },
-              {
-                id: 'the-blue-atom-2', 
-                title: 'The Blue Atom 2',
-                src: Image,
-                summary: 'A one of a kind artwork produced by myself which showcases the way in which atoms in the universe coincide with waves in the ocean.',
-                fullDescription: ['paragraph 1', 'paragraph 2', 'paragraph 3']
-              },
-              {
-                id: 'the-blue-atom-2', 
-                title: 'The Blue Atom 2',
-                src: Image,
-                summary: 'A one of a kind artwork produced by myself which showcases the way in which atoms in the universe coincide with waves in the ocean.',
-                fullDescription: ['paragraph 1', 'paragraph 2', 'paragraph 3']
-              },
           ]
       }
   }
