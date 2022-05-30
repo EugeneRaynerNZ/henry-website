@@ -7,8 +7,8 @@
 <script>
 import Vue from 'vue'
 import Artwork from './Artwork.vue'
-import AbstractCloningVector from "../assets/image1.jpg"
-import ColourBlind from "../assets/colour-blind.jpg"
+import Sunset from "../assets/sunset2.jpg"
+import BlackCircle from "../assets/blackcircle.jpg"
 // import Image2 from "../assets/2.jpg"
 // import Image3 from "../assets/3.jpg"
 // import Image4 from "../assets/4.jpg"
@@ -22,17 +22,17 @@ export default Vue.extend({
       return {
           art: [
               {
-                id: 'abstract-cloning-vector', 
-                title: 'Abstract Cloning Vector',
-                src: AbstractCloningVector,
-                summary: 'Acrylic on canvas, 2021',
+                id: 'abstract-beachscape2', 
+                title: 'Abstract Beachscape #2',
+                src: Sunset,
+                summary: 'Acrylic on canvas, 2021, 70 x 50cm',
                 fullDescription: ['paragraph 1', 'paragraph 2', 'paragraph 3']
               },
               {
-                id: 'colour-blind', 
-                title: 'Colourblind',
-                src: ColourBlind,
-                summary: 'Acrylic on canvas, 2020, 40 x 40cm',
+                id: 'black-cirlce', 
+                title: 'Void with Drips',
+                src: BlackCircle,
+                summary: 'Acrylic on canvas, 2021, 70 x 50cm',
                 fullDescription: ['paragraph 1', 'paragraph 2', 'paragraph 3']
               },
           ]

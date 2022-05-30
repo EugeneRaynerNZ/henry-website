@@ -1,10 +1,10 @@
 <template>
     <main>
-      <h1>About</h1>
+      <h1>Henry de Malmanche - Abstract Artist</h1>
       
       <div class="about--summary">
-          <img :src="Henry" alt="Henry De Malmanche">
-          <p>Text in here about henry, art, science, nerd etc</p>
+          <img :src="Henry" alt="Henry de Malmanche">
+            <p>Born in Auckland, New Zealand, I am now based in Brisbane, Australia where I work as a research scientist in the field of Biotechnology. <br /><br />My artwork explores the abstract and the experimental with an emphasis on colour and pattern. Selected works are avaliable for purchase or to exhibit.</p>
       </div>
     </main>
 </template>

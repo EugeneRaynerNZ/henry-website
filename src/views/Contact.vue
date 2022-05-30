@@ -1,7 +1,7 @@
 <template>
     <main>
         <h1>Contact</h1>
-        <p>Please enter your contact information below and<br />I will get back to you as soon as possible!</p>
+        <p>Please enter your contact information below and<br />the artist will contact you shortly.</p>
         <ContactForm />
     </main>
 </template>

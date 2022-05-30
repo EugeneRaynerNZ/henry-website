@@ -7,8 +7,8 @@
 <script>
 import Artwork from './Artwork.vue'
 
-import Ice from "../assets/ice.jpg"
-import Sunset from "../assets/hillscape.jpg"
+import Ice from "../assets/ice2.jpg"
+import Hillscape from "../assets/hillscape2.jpg"
 
 export default {
   name: 'Col2',
@@ -27,8 +27,8 @@ export default {
               },
               {
                 id: 'hillscape', 
-                title: 'Abstract Beachscape #2',
-                src: Sunset,
+                title: 'Abstract Hillscape',
+                src: Hillscape,
                 summary: '2021, acrylic on canvas, 70 x 50cm',
                 fullDescription: ['paragraph 1', 'paragraph 2', 'paragraph 3']
               },

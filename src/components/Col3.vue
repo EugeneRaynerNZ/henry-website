@@ -7,8 +7,8 @@
 <script>
 import Artwork from './Artwork.vue'
 
-import Tooth from "../assets/tooth.jpg"
-import Longform4 from "../assets/longform4.jpg"
+import Tooth from "../assets/tooth2.jpg"
+import Longform4 from "../assets/longforme4.jpg"
 
 export default {
   name: 'Col3',

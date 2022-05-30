@@ -8,7 +8,7 @@
     </nav>
     
       <router-view></router-view>
-      <footer>&copy; Copyright Henry DeMalmanche</footer>
+      <footer>&copy; Copyright Henry de Malmanche</footer>
     </div>
   </div>
 </template>
