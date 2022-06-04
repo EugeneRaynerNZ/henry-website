@@ -8,7 +8,6 @@
 import Vue from 'vue'
 import Artwork from './Artwork.vue'
 import Sunset from "../assets/sunset2.jpg"
-import ColourBlind from "../assets/colour-blind.jpg"
 import McM from "../assets/mcm.jpg"
 import Peaks from "../assets/peaks.jpg"
 import Alpine from "../assets/alpine.jpg"
@@ -45,13 +44,7 @@ export default Vue.extend({
                 summary: 'Acrylic on canvas, 2021, 40 x 40cm',
                 fullDescription: ['paragraph 1', 'paragraph 2', 'paragraph 3']
               },
-              {
-                id: 'colour-blind', 
-                title: 'Colourblind',
-                src: ColourBlind,
-                summary: 'Acrylic on canvas, 2020, 40 x 40cm',
-                fullDescription: ['paragraph 1', 'paragraph 2', 'paragraph 3']
-              },
+
               {
                 id: 'alpine', 
                 title: 'Alpine Dive',
