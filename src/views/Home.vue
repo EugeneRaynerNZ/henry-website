@@ -30,6 +30,7 @@ export default Vue.extend({
   display: flex;
   text-align: left;
   flex-direction: column;
+  flex: 33%;
 }
 
 .col .artwork{

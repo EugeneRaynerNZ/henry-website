@@ -79,7 +79,7 @@
                   submit-button
                   jf-form-buttons
                   jsTest-submitField
-                  button
+                  button2
                 "
                 data-component="button"
                 data-content=""
@@ -155,6 +155,22 @@ form button{
 
 .form-buttons-wrapper{
     width: 100%;
+}
+
+.button2{
+  border: none;
+  background: white;
+  font-size: 16px;
+  box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.13);
+  padding: 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.1s;
+}
+
+.button2:hover{
+  box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.23);
+  margin-top: -2px;
 }
 
 </style>
