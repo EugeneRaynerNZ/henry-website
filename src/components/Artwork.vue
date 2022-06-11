@@ -35,6 +35,9 @@ export default Vue.extend({
   },
   methods: {
         show () {
+            if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+ return
+}
             this.$modal.show(this.art.id);
         },
         hide () {
