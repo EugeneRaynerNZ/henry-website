@@ -1,9 +1,8 @@
 <template>
   <div class="artwork">
-    <img :src="art.src" :alt="art.title">
+    <img :src="art.src" :alt="art.title" @click="show" class="artworkhover">
     <h2>{{ art.title }}</h2>
     <p>{{ art.summary}}</p>
-    <button @click="show" class="button">Read More</button>
     <modal :name="art.id">
         <div class="modal--container">
         <div class="modal--container-header">
@@ -126,5 +125,15 @@ export default Vue.extend({
 .button:hover{
   box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.23);
   margin-top: -2px;
+}
+
+.artworkhover{
+  cursor:pointer;
+  transition:all 0.6s;
+}
+
+.artworkhover:hover{
+  box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.23);
+  transform:scale(1.1)
 }
 </style>
